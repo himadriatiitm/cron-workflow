@@ -21,7 +21,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          head -n 4 /dev/urandom | base64 > proof-of-work
+          head -c 4 /dev/urandom | base64 > proof-of-work
           git add proof-of-work
           git commit -m "wow this works" || exit 0
           git push
