@@ -14,6 +14,9 @@ jobs:
       contents: write
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
       - name: 24f3004990@ds.study.iitm.ac.in
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
